@@ -76,3 +76,4 @@ $ npm start
 ## Run locaiton service in second terminal
 $ npm run serve
 ```
+# weather-app
