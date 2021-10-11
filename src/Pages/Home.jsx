@@ -38,8 +38,7 @@ const Home = () => {
         );
       })
       .catch((error) => {
-        dispatch({ type: Actions.SET_ERROR, error: error.message });
-        return (window.location.href = '/');
+        return dispatch({ type: Actions.SET_ERROR, error: error.message });
       });
   };
 
