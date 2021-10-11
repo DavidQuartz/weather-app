@@ -74,7 +74,7 @@ const WeatherContextProvider = (props) => {
       } else {
         alert('Geolocation is not supported by this browser.');
       }
-    }, 1000);
+    }, 4000);
 
   useEffect(() => {
     setUserCoordinates();
