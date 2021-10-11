@@ -1,0 +1,124 @@
+.card {
+    padding: 1rem 0;
+
+
+    &,
+    &__highlight {
+        background-color: $color-background-light;
+    }
+
+
+
+    &__highlight {
+        &--details {
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            h2 {
+                font-size: $large-font-size;
+
+                span {
+                    font-weight: 300;
+                    font-size: 6rem;
+                }
+            }
+
+            .wind-direction {
+                font-size: 1.4rem;
+            }
+
+            /* Wind directions
+    N - 0° 
+    NNE - 22.5°
+    NE - 45° 
+    ENE - 67.5° 
+    E - 90° 
+    ESE - 112.5° 
+    SE - 135° 
+    SSE - 157.5°
+    S - 180° 
+    SSW - 202.5° 
+    SW - 225° 
+    WSW - 247.5° 
+    W - 270° 
+    WNW - 292.5° 
+    NW - 315°
+    NNW - 337.5°
+    */
+
+            span.navigation {
+                transition: transform 2s ease-in-out;
+            }
+
+            span.n {
+                transform: rotate(0deg);
+            }
+
+            span.nne {
+                transform: rotate(22.5deg);
+            }
+
+            span.ne {
+                transform: rotate(45deg);
+            }
+
+            span.ene {
+                transform: rotate(67.5deg);
+            }
+
+            span.ene {
+                transform: rotate(90deg);
+            }
+
+            span.ese {
+                transform: rotate(112.5deg);
+            }
+
+            span.se {
+                transform: rotate(135deg);
+            }
+
+            span.sse {
+                transform: rotate(157.5deg);
+            }
+
+            span.s {
+                transform: rotate(180deg);
+            }
+
+            span.sw {
+                transform: rotate(225deg);
+            }
+
+            span.ssw {
+                transform: rotate(202.5deg);
+            }
+
+            span.wsw {
+                transform: rotate(247.5deg);
+            }
+
+            span.w {
+                transform: rotate(270deg);
+            }
+
+            span.wnw {
+                transform: rotate(292.5deg);
+            }
+
+            span.nw {
+                transform: rotate(315deg);
+            }
+
+            span.nw {
+                transform: rotate(337.5deg);
+            }
+        }
+    }
+
+
+    img {
+        width: 56.44px;
+    }
+}

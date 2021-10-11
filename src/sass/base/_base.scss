@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+    background-color: $color-background;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.icon-wrapper {
+    background: #585676;
+    @include iconCircle;
+    @include centerFlex;
+
+    span {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    &.active {
+        background: $color-off-white;
+        color: $color-dark;
+    }
+
+}
+
+.wind-wrapper {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+progress {
+    color: yellow;
+    border-radius: 50%;
+    width: 100%;
+}

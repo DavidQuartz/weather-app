@@ -1,0 +1,17 @@
+.btn {
+    padding: 1rem;
+    color: $default-font-color;
+
+    &-gray {
+        box-shadow: $button-shadow;
+        background-color: $color-button;
+    }
+}
+
+.search--button {
+    background-color: $color-button-blue;
+
+    &:hover {
+        background-color: hsl(236, 80%, 47%);
+    }
+}

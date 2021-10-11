@@ -1,0 +1,39 @@
+.search {
+    .border {
+        border-color: $color-off-white;
+    }
+}
+
+.suggestions {
+    ul {
+
+        li {
+            font-size: 1.6rem;
+            color: $color-off-white;
+            cursor: pointer;
+
+            button {
+                padding: 2rem;
+                width: 100%;
+                border: 1px solid transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    display: none;
+                    color: $color-faint;
+                }
+
+                &:hover,
+                &:active {
+                    border: $border-faint;
+
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

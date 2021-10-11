@@ -1,0 +1,59 @@
+.dashboard {
+    color: $color-white;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .unit {
+        display: none;
+    }
+
+    @include respond(tablet) {
+        margin-left: 459px;
+        padding: 5rem;
+        width: calc(100% - 459px);
+
+        .unit {
+            display: flex;
+        }
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .temperature-container {
+        width: 100%;
+
+        &__cards {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-column-gap: 2em;
+            grid-row-gap: 1em;
+
+            h2,
+            span {
+                font-size: 1.2rem;
+
+                &:last-child {
+                    color: $color-light;
+                }
+            }
+
+        }
+    }
+
+    .highlight {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5em;
+
+        @include respond(desktop) {
+            grid-template-columns: repeat(2, minmax(120px, 1fr));
+        }
+    }
+}

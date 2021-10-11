@@ -1,0 +1,44 @@
+  .progress-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      span {
+          color: $color-light;
+          font-weight: 700;
+
+      }
+
+      label~span {
+          align-self: flex-end;
+      }
+  }
+
+  progress[value] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      /* for IE16 */
+      color: $color-yellow;
+
+      /* for firefox */
+      height: 8px;
+      width: 100%;
+
+      &::-webkit-progress-bar,
+      &::-webkit-progress-value {
+          border-radius: 80px;
+      }
+
+      &::-webkit-progress-bar {
+          background-color: $color-off-white;
+      }
+
+      &::-moz-progress-bar {
+          background: $color-yellow;
+      }
+
+      &::-webkit-progress-value {
+          background: $color-yellow;
+      }
+  }

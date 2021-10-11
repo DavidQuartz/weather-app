@@ -1,0 +1,97 @@
+.sidebar-wrapper {
+    width: 100%;
+    font-size: 1.3rem;
+
+    &,
+    .search-drawer {
+        background-color: $color-background-light;
+        height: 100vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        overflow-x: hidden;
+
+        &-menu {
+            padding: 2.5rem;
+
+            .location-icon-wrapper {
+                background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                @include iconCircle;
+                @include centerFlex;
+
+                span {
+                    color: #E7E7EB;
+                }
+            }
+        }
+
+        &-weather-display {
+            height: 16.875rem;
+            position: relative;
+            z-index: 77;
+            @include centerFlex;
+
+            &__background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url(../../assets/Cloud-background.png) no-repeat center/120%;
+                opacity: .2;
+                height: 100%;
+            }
+
+            img {
+                width: 12.625rem;
+            }
+        }
+    }
+
+    .weather-widget {
+        height: fit-content;
+
+        h1 {
+            font-size: 100px;
+            color: $color-white;
+
+            span {
+                font-size: 20px;
+                font-weight: 400;
+                color: $color-light;
+            }
+        }
+
+        h2 {
+            font-size: 36px;
+            color: $color-light;
+        }
+
+        &__bottom,
+        &__bottom span {
+            color: $color-light;
+            font-size: 1.3rem;
+        }
+    }
+
+    @include respond(tablet) {
+        position: fixed;
+
+
+        &,
+        .search-drawer {
+            max-width: 459px;
+        }
+
+        .sidebar-weather-display {
+            height: 28.875rem;
+
+            // &__background {
+            // background-size: 684px 376px;
+            // background-position: -100px 0;
+            // }
+        }
+    }
+
+}

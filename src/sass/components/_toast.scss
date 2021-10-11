@@ -1,0 +1,28 @@
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin: auto;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+
+    span {
+        display: inline-block;
+        width: 100%;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &.show {
+        visibility: visible;
+        /* Animation: Take 0.5 seconds to fade in and out the toast.
+  However, delay the fade out process for 2.5 seconds */
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+}

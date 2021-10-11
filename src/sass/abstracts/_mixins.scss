@@ -1,0 +1,61 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centerTop {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin centerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin iconCircle {
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+// Media query mixins for phone, tablet, and desktop
+/*
+
+$breakpoint arguement choices:
+- phone
+- tablet
+- desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 599) {
+            @content;
+        }
+
+        //iphone 8 plus
+    }
+
+    @if $breakpoint==tablet {
+        @media only screen and (min-width: 600px) {
+            @content;
+        }
+
+        // tablets upward
+    }
+
+
+    @if $breakpoint==desktop {
+        @media only screen and (min-width: 1440px) {
+            @content;
+        }
+
+        // Desktop
+    }
+}
