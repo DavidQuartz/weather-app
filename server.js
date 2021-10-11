@@ -48,7 +48,7 @@ app.post('/api/search/:city', async (req, res) => {
     .catch((error) => res.send(error));
 });
 
-app.get('/*', function (req, res) {
+app.all('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
