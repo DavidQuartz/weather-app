@@ -31,7 +31,6 @@
 - [Features](#features)
 - [How to use](#how-to-use)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- OVERVIEW -->
 
@@ -86,4 +85,6 @@ $ npm run dev
 $ npm run serve
 ```
 
-# weather-app
+## Contact
+
+If you like this project, you can reach me at [quartzdavid@gmail.com](mailto:quartzdavid@gmail.com)
