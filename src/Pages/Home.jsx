@@ -15,12 +15,12 @@ const Home = () => {
   const getWoeid = (lat, long) => {
     return getLocationID(lat, long)
       .then((data) => {
-        const response = data?.data[0];
+        const response = data.data[0];
         dispatch({
           type: Actions.SET_CITY,
-          city: response?.title,
-          woeid: response?.woeid,
-          currentCity: response?.title,
+          city: response.title,
+          woeid: response.woeid,
+          currentCity: response.title,
         });
         // get forecast
         fetchWeatherForecast(
@@ -33,7 +33,7 @@ const Home = () => {
           () =>
             dispatch({
               type: Actions.SET_CURRENT_LOCATION,
-              woeid: response?.woeid,
+              woeid: response.woeid,
             })
         );
       })
