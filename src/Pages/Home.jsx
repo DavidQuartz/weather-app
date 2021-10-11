@@ -39,7 +39,7 @@ const Home = () => {
       })
       .catch((error) => {
         dispatch({ type: Actions.SET_ERROR, error: error.message });
-        return getWoeid(latitude, longitude);
+        return (window.location.href = '/');
       });
   };
 
