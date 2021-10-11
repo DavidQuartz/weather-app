@@ -15,7 +15,7 @@ const Home = () => {
   const getWoeid = (lat, long) => {
     return getLocationID(lat, long)
       .then((data) => {
-        const response = data.data[0];
+        const response = data?.data[0];
         dispatch({
           type: Actions.SET_CITY,
           city: response.title,
@@ -38,7 +38,8 @@ const Home = () => {
         );
       })
       .catch((error) => {
-        return dispatch({ type: Actions.SET_ERROR, error: error.message });
+        dispatch({ type: Actions.SET_ERROR, error: error.message });
+        return getWoeid(latitude, longitude);
       });
   };
 
