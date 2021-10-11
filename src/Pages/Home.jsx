@@ -24,7 +24,7 @@ const Home = () => {
         });
         // get forecast
         fetchWeatherForecast(
-          response?.woeid,
+          response.woeid,
           (forecast) =>
             dispatch({
               type: Actions.SET_FORECAST,
