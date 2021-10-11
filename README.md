@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://practical-shaw-309fe4.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/DavidQuartz/weather-app">
       Solution
     </a>
     <span> | </span>
@@ -37,12 +37,13 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
-
-Introduce your projects by taking a screenshot, video recordings or a gif. Try to tell us about the solution you built by answering the following:
+![screenshot](./src/assets/screenshot.png)
 
 - Where can I see your demo?
+  This project can be viewed at [https://practical-shaw-309fe4.netlify.app/](https://practical-shaw-309fe4.netlify.app/)
+
 - What was your experience building it.
+  I had fun building this project and I hope you have fun exploring it.
 
 ### Built With
 
@@ -50,13 +51,21 @@ Introduce your projects by taking a screenshot, video recordings or a gif. Try t
 - [Tailwind](https://tailwindcss.com/)
 - [Sass](https://sass-lang.com/)
 - [Materia-UI](https://mui.com/)
+- [ExpressJs](https://expressjs.com)
+- [Axios](https://axios-http.com)
 
 ## Features
 
-- Weather forecast for up tp 5 days
+- Weather forecast for your city for up tp 5 days
 - Geocoding
-- Search location to view temperature
+- Search for cities to view their weather forecasts
 - Convert tempertatures from Celcius to Fahrenheit
+- See min and max temperature each day
+- See wind status and wind direction
+- See humidity percentage
+- See visibility indicator
+- See air pressure number
+- Request you current location weather
 
 ## How To Use
 
@@ -64,16 +73,17 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/DavidQuartz/weather-app
 
 # Install dependencies
 $ npm install
 
 # Open 2 terminals
 ## Run the app in first terminal
-$ npm start
+$ npm run dev
 
 ## Run locaiton service in second terminal
 $ npm run serve
 ```
+
 # weather-app
