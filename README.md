@@ -77,12 +77,8 @@ $ git clone https://github.com/DavidQuartz/weather-app
 # Install dependencies
 $ npm install
 
-# Open 2 terminals
-## Run the app in first terminal
+# Run the app in first terminal
 $ npm run dev
-
-## Run locaiton service in second terminal
-$ npm run serve
 ```
 
 ## Contact
