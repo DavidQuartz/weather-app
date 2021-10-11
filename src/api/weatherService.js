@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // get woeid of user's location
 export const getLocationID = (latt, long) => {
-  const url = `http://localhost:3000/api/getCityInfo/${latt},${long}`;
+  const url = `https://pacific-tor-81582.herokuapp.com/api/getCityInfo/${latt},${long}`;
 
   return axios
     .get(url, {
@@ -16,7 +16,7 @@ export const getLocationID = (latt, long) => {
 
 // use user's location woeid to get weather forecast
 export const getWeatherForecast = (woeid) => {
-  const url = `http://localhost:3000/api/weather/${woeid}`;
+  const url = `https://pacific-tor-81582.herokuapp.com/api/weather/${woeid}`;
 
   return axios
     .get(url, {
@@ -39,7 +39,7 @@ export const fetchWeatherForecast = (woeid, fn1, fn2 = () => {}) => {
 
 // search for city
 export const searchCity = (query) => {
-  const url = `http://localhost:3000/api/search/${query}`;
+  const url = `https://pacific-tor-81582.herokuapp.com/api/search/${query}`;
 
   return axios
     .post(url, {
