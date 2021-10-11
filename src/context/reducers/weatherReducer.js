@@ -24,8 +24,7 @@ const weatherReducer = (state, action) => {
     case Actions.SET_CITY:
       return {
         ...state,
-        city: action.city,
-        woeid: action.woeid,
+        ...action,
       };
 
     case Actions.SET_FORECAST:

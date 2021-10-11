@@ -17,6 +17,7 @@ const WeatherContextProvider = (props) => {
     id: null,
     forecast: [],
     currentLocationWoeid: '',
+    currentCity: '',
   });
 
   // handling Location coordinates Web API errors

@@ -29,20 +29,25 @@ const LocationSearchPanel = () => {
     searchCity(search).then((data) => {
       const response = data.data;
       setCities(response);
-      // dispatch({
-      //   type: Actions.SET_CITY,
-      //   city: response.title,
-      //   woeid: response.woeid,
-      // });
+
       setLoading(false);
     });
 
     setSearch('');
   };
 
-  const getSelectedCityForecast = (woeid) => {
+  const getSelectedCityForecast = (city) => {
     dispatch({ type: Actions.FETCHING });
     // get forecast
+
+    const { title, woeid } = city;
+
+    dispatch({
+      type: Actions.SET_CITY,
+      city: title,
+      woeid: woeid,
+    });
+
     fetchWeatherForecast(woeid, (forecast) =>
       dispatch({
         type: Actions.SET_FORECAST,
@@ -93,7 +98,7 @@ const LocationSearchPanel = () => {
         <ul className="space-y-5">
           {cities.map((city) => (
             <li key={city.woeid}>
-              <button onClick={() => getSelectedCityForecast(city.woeid)}>
+              <button onClick={() => getSelectedCityForecast(city)}>
                 {city.title}{' '}
                 <span className="material-icons">chevron_right</span>
               </button>

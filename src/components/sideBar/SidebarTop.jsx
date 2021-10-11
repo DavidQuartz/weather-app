@@ -10,7 +10,7 @@ const SidebarTop = () => {
   const { weatherState, dispatch: weatherDispatch } =
     useContext(WeatherContext);
 
-  const { currentLocationWoeid } = weatherState;
+  const { currentLocationWoeid, currentCity } = weatherState;
 
   const openDrawer = () => {
     dispatch({ type: Actions.OPEN_SEARCH_DRAWER });
@@ -20,12 +20,17 @@ const SidebarTop = () => {
     if (currentLocationWoeid) {
       weatherDispatch({ type: WeatherActions.FETCHING });
       // get forecast
-      fetchWeatherForecast(currentLocationWoeid, (forecast) =>
+      fetchWeatherForecast(currentLocationWoeid, (forecast) => {
         weatherDispatch({
+          type: WeatherActions.SET_CITY,
+          city: currentCity,
+        });
+
+        return weatherDispatch({
           type: WeatherActions.SET_FORECAST,
           forecast,
-        })
-      );
+        });
+      });
     }
   };
 

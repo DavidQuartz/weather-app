@@ -20,6 +20,7 @@ const Home = () => {
           type: Actions.SET_CITY,
           city: response.title,
           woeid: response.woeid,
+          currentCity: response.title,
         });
         // get forecast
         fetchWeatherForecast(
