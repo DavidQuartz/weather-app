@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.22.0",
     "cors": "^2.8.5",
+    "express-favicon": "^2.0.1",
     "material-design-icons": "^3.0.1",
     "moment": "^2.29.1",
     "node-sass": "4.14.x",
@@ -22,8 +23,9 @@
     "react-toastify": "^8.0.3"
   },
   "scripts": {
-    "start": "craco start",
-    "serve": "node server.js",
+    "dev": "craco start",
+    "start": "node server.js",
+    "serve": "nodemon server.js",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
