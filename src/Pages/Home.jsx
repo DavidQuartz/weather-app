@@ -18,13 +18,13 @@ const Home = () => {
         const response = data?.data[0];
         dispatch({
           type: Actions.SET_CITY,
-          city: response.title,
-          woeid: response.woeid,
-          currentCity: response.title,
+          city: response?.title,
+          woeid: response?.woeid,
+          currentCity: response?.title,
         });
         // get forecast
         fetchWeatherForecast(
-          response.woeid,
+          response?.woeid,
           (forecast) =>
             dispatch({
               type: Actions.SET_FORECAST,
@@ -33,7 +33,7 @@ const Home = () => {
           () =>
             dispatch({
               type: Actions.SET_CURRENT_LOCATION,
-              woeid: response.woeid,
+              woeid: response?.woeid,
             })
         );
       })
