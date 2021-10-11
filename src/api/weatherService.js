@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // get woeid of user's location
 export const getLocationID = (latt, long) => {
-  const url = `https://practical-shaw-309fe4.netlify.app/api/getCityInfo/${latt},${long}`;
+  const url = `http://localhost:3001/api/getCityInfo/${latt},${long}`;
 
   return axios
     .get(url, {
@@ -16,7 +16,7 @@ export const getLocationID = (latt, long) => {
 
 // use user's location woeid to get weather forecast
 export const getWeatherForecast = (woeid) => {
-  const url = `https://practical-shaw-309fe4.netlify.app/api/weather/${woeid}`;
+  const url = `http://localhost:3001/api/weather/${woeid}`;
 
   return axios
     .get(url, {
@@ -39,7 +39,7 @@ export const fetchWeatherForecast = (woeid, fn1, fn2 = () => {}) => {
 
 // search for city
 export const searchCity = (query) => {
-  const url = `https://practical-shaw-309fe4.netlify.app/api/search/${query}`;
+  const url = `http://localhost:3001/api/search/${query}`;
 
   return axios
     .post(url, {
